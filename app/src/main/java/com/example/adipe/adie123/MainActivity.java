@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else{
-            Toast.makeText(this, "Input is unavailable", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "הקלט לא חוקי", Toast.LENGTH_SHORT).show();
         }
         u = 4;
     }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             else{
-                Toast.makeText(this, "Input is unavailable", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "הקלט לא חוקי", Toast.LENGTH_SHORT).show();
                 kel.setText("");
             }
             u = 2;
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                     n = n * x; break;
                 case 4:
                     n = n / x; break;
-                default: kel.setText("error");
+                default: kel.setText(" לא חוקי");
             }
             str= Double.toString(n);
             kel.setText(str);
