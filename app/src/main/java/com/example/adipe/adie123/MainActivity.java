@@ -54,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
                         n = n / x;
                     break;
             }
-
+            str=Double.toString(n);
+            kel.setHint(str);
         }
 
         else{
             Toast.makeText(this, "Input is unavailable", Toast.LENGTH_SHORT).show();
-            kel.setText("");
         }
         u = 4;
     }
@@ -83,14 +83,16 @@ public class MainActivity extends AppCompatActivity {
                     n = n * x;
                     break;
                 case 4:
-                    n = n / x;
+                    if (x == 00)
+                        Toast.makeText(this, "לא ניתן לחלק ב0", Toast.LENGTH_SHORT).show();
+                    else
+                        n = n / x;
                     break;
-
             }
-            kel.setHint(Double.toString(n));
+            str=Double.toString(n);
+            kel.setHint(str);
         } else {
             Toast.makeText(this, "הקלט לא חוקי", Toast.LENGTH_SHORT).show();
-            kel.setText("");
         }
 
         u = 3;
@@ -113,9 +115,11 @@ public class MainActivity extends AppCompatActivity {
                         n = n * x;
                         break;
                     case 4:
-                        n = n / x;
+                        if (x == 00)
+                            Toast.makeText(this, "לא ניתן לחלק ב0", Toast.LENGTH_SHORT).show();
+                        else
+                            n = n / x;
                         break;
-
                 }
                 kel.setHint(Double.toString(n));
             }
